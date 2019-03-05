@@ -1,0 +1,25 @@
+---
+kind: List
+apiVersion: v1
+items:
+- kind: ReplicationController
+  apiVersion: v1
+  metadata:
+    name: bench
+    namespace: benchmark-containers
+  spec:
+    replicas: 2
+    selector:
+      name: bench
+    template:
+      metadata:
+        labels:
+          name: bench
+          app: benchmark-containers
+          namespace: benchmark-containers
+      spec:
+        containers:
+        - name: bench
+          image: aleozlx/benchmark-containers
+          args: ["cpu"]
+
