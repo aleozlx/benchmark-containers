@@ -1,0 +1,13 @@
+[package]
+name = "benchmark-containers"
+description = "Busybox style benchmark"
+version = "0.1.0"
+authors = ["Alex Yang <aleozlx@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+clap = "^2.32.0"
+nix = "0.13.0"
+libc = "0.2.49"
+threadpool = "^1.7.1"
+sysinfo = "^0.8.2"
