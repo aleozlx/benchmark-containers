@@ -5,21 +5,21 @@ items:
 - kind: ReplicationController
   apiVersion: v1
   metadata:
-    name: bench
+    name: bench-cs
     namespace: benchmark-containers
   spec:
     replicas: 2
     selector:
-      name: bench
+      name: bench-cs
     template:
       metadata:
         labels:
-          name: bench
+          name: bench-cs
           app: benchmark-containers
           namespace: benchmark-containers
       spec:
         containers:
-        - name: bench
+        - name: bench-cs
           image: aleozlx/benchmark-containers
-          args: ["cpu"]
+          args: ["cs"]
 
